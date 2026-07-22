@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shasmitha Jegadheesan | Cybersecurity Portfolio</title>
+<meta name="description" content="J. Shasmitha — Cybersecurity undergraduate specializing in penetration testing, vulnerability management and SOC analysis. Portfolio, labs, CTFs and certifications." />
+<meta name="theme-color" content="#0a0714" />
+
+<!-- Fonts: Chakra Petch for display (cyber/technical feel), Inter for body -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<!-- ============ CYBER GRID + MATRIX RAIN BACKGROUND (fixed, whole page) ============ -->
+<canvas id="matrix-canvas" aria-hidden="true"></canvas>
+<div class="cyber-grid" aria-hidden="true"></div>
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">
+      <span class="logo-bracket">&lt;</span>SJ<span class="logo-bracket">/&gt;</span>
+    </a>
+    <nav class="nav-links" id="nav-links">
+      <a href="#about" data-section="about">About</a>
+      <a href="#education" data-section="education">Education</a>
+      <a href="#skills" data-section="skills">Skills</a>
+      <a href="#certifications" data-section="certifications">Certs</a>
+      <a href="#projects" data-section="projects">Projects</a>
+      <a href="#ctf" data-section="ctf">CTF</a>
+      <a href="#writeups" data-section="writeups">Writeups</a>
+      <a href="#leadership" data-section="leadership">Leadership</a>
+      <a href="#contact" data-section="contact">Contact</a>
+    </nav>
+    <a href="assets/Shasmitha_Cybersecurity_Intern_CV.pdf" download class="nav-cta">Resume</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section id="hero" class="hero">
+    <div class="hero-inner">
+      <p class="hero-eyebrow reveal"><span class="dot-blink"></span> whoami --status "second-year, seeking internship"</p>
+
+      <h1 class="hero-name reveal">
+        <span class="hero-name-line">SHASMITHA</span>
+        <span class="hero-name-line hero-name-accent">JEGADHEESAN</span>
+      </h1>
+
+      <p class="hero-role reveal">
+        <span id="typed-role"></span><span class="type-cursor">_</span>
+      </p>
+
+      <p class="hero-intro reveal">
+        Cybersecurity undergraduate focused on practical, hands-on penetration testing and
+        defensive security. I build home labs, break them on purpose, and write up exactly
+        how &mdash; from Nmap recon to Metasploit shells to root.
+      </p>
+
+      <div class="hero-cta reveal">
+        <a href="assets/Shasmitha_Cybersecurity_Intern_CV.pdf" download class="btn btn-primary">
+          <span>Download CV</span>
+        </a>
+        <a href="#contact" class="btn btn-ghost">Contact Me</a>
+        <a href="#projects" class="btn btn-ghost">View Projects</a>
+      </div>
+
+      <div class="hero-stats reveal">
+        <div class="stat">
+          <span class="stat-num" data-count="2">0</span>
+          <span class="stat-label">TryHackMe League Wins</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-count="9" data-suffix="+">0</span>
+          <span class="stat-label">Security Tools Practiced</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-count="5">0</span>
+          <span class="stat-label">Certifications</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" data-count="76" data-prefix="/">0</span>
+          <span class="stat-label">Teams — ICTS CTF rank 25</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-portrait reveal" aria-hidden="true">
+      <div class="portrait-ring">
+        <svg viewBox="0 0 200 200" class="ring-svg">
+          <circle cx="100" cy="100" r="94" class="ring-circle" />
+        </svg>
+        <div class="portrait-core">
+          <span class="portrait-initials">SJ</span>
+          <span class="portrait-tag">CYBERSECURITY</span>
+        </div>
+      </div>
+    </div>
+
+    <button class="scroll-cue" id="scroll-cue" aria-label="Scroll to About section">
+      <span>scroll</span>
+      <span class="scroll-line"></span>
+    </button>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="section">
+    <div class="section-inner">
+      <p class="section-eyebrow reveal">01 &mdash; About</p>
+      <h2 class="section-title reveal">Behind the terminal</h2>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I'm a 2nd-year BSc (Hons) Information Technology undergraduate at
+            <strong> Sri Lanka Institute of Information Technology (SLIIT), Kandy</strong>,
+            specializing in Cybersecurity, expected to graduate in 2028.
+          </p>
+          <p>
+            My focus is hands-on: virtual lab environments, attack simulation, and
+            translating vulnerabilities into clear, actionable documentation. I run
+            <strong> Velvet Shark Studio</strong>, my own cybersecurity portfolio and blog, where
+            I publish technical write-ups and step-by-step breakdowns of CTF challenges and
+            lab configurations.
+          </p>
+          <p>
+            Outside the lab, I've led as Senior Prefect at Madina National School, headed
+            Script Writing for the Media Unit, coordinated the Sports Union, and I'm active
+            in AIESEC SLIIT Kandy's Outgoing Global Talent department &mdash; so documentation,
+            public speaking, and staying calm under a 24-hour CTF clock all come from the
+            same place.
+          </p>
+          <div class="about-languages">
+            <span class="lang-chip">English &middot; Fluent</span>
+            <span class="lang-chip">Sinhala &middot; Fluent</span>
+            <span class="lang-chip">Tamil &middot; Fluent</span>
+          </div>
+        </div>
+
+        <div class="about-card reveal">
+          <div class="glass-card terminal-card">
+            <div class="terminal-bar">
+              <span class="term-dot term-red"></span>
+              <span class="term-dot term-yellow"></span>
+              <span class="term-dot term-green"></span>
+              <span class="term-title">shasmitha@velvetshark:~</span>
+            </div>
+            <pre class="terminal-body"><code><span class="tk-prompt">$</span> <span class="tk-cmd">cat</span> profile.json
+{
+  "role": <span class="tk-str">"Aspiring SOC Analyst"</span>,
+  "focus": [<span class="tk-str">"pentesting"</span>, <span class="tk-str">"threat hunting"</span>,
+            <span class="tk-str">"incident response"</span>],
+  "university": <span class="tk-str">"SLIIT Kandy"</span>,
+  "year": <span class="tk-num">2</span>,
+  "status": <span class="tk-str">"seeking internship"</span>,
+  "known_for": <span class="tk-str">"turning exploits into write-ups"</span>
+}
+<span class="tk-prompt">$</span> <span class="tk-cmd">_</span></code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section id="education" class="section section-alt">
+    <div class="section-inner">
+      <p class="section-eyebrow reveal">02 &mdash; Education</p>
+      <h2 class="section-title reveal">Academic path</h2>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-marker"></div>
+          <div class="glass-card timeline-card">
+            <span class="timeline-date">2024 &ndash; 2028 (Expected)</span>
+            <h3>BSc (Hons) Information Technology — Specializing in Cybersecurity</h3>
+            <p class="timeline-org">Sri Lanka Institute of Information Technology (SLIIT), Kandy</p>
+            <p>Current status: 2nd Year, 2nd Semester.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-marker"></div>
+          <div class="glass-card timeline-card">
+            <span class="timeline-date">2021 &ndash; 2023</span>
+            <h3>GCE Advanced Level</h3>
+            <p class="timeline-org">K/Madeena National College</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-marker"></div>
+          <div class="glass-card timeline-card">
+            <span class="timeline-date">2009 &ndash; 2020</span>
+            <h3>GCE Ordinary Level</h3>
+            <p class="timeline-org">Hill Country International Girls College</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section id="skills" class="section">
+    <div class="section-inner">
+      <p class="section-eyebrow reveal">03 &mdash; Skills</p>
+      <h2 class="section-title reveal">Technical stack</h2>
+
+      <div class="skills-grid">
+
+        <div class="glass-card skill-category reveal">
+          <h3><span class="skill-icon">&#9881;</span> Security Tools</h3>
+          <ul class="skill-bars">
+            <li><span>Nmap</span><div class="bar"><i style="--w:92%"></i></div></li>
+            <li><span>Metasploit Framework</span><div class="bar"><i style="--w:88%"></i></div></li>
+            <li><span>Burp Suite</span><div class="bar"><i style="--w:80%"></i></div></li>
+            <li><span>Wireshark</span><div class="bar"><i style="--w:82%"></i></div></li>
+            <li><span>John the Ripper / Hydra</span><div class="bar"><i style="--w:75%"></i></div></li>
+            <li><span>Dirbuster / Ffuf</span><div class="bar"><i style="--w:78%"></i></div></li>
+            <li><span>CyberChef</span><div class="bar"><i style="--w:70%"></i></div></li>
+          </ul>
+        </div>
+
+        <div class="glass-card skill-category reveal">
+          <h3><span class="skill-icon">&#128737;</span> Specializations</h3>
+          <div class="chip-cloud">
+            <span class="chip">Penetration Testing</span>
+            <span class="chip">Vulnerability Management</span>
+            <span class="chip">OSINT</span>
+            <span class="chip">Cryptography</span>
+            <span class="chip">Web Exploitation</span>
+            <span class="chip">Incident Response</span>
+            <span class="chip">Threat Hunting</span>
+            <span class="chip">Endpoint Protection</span>
+            <span class="chip">Packet Analysis</span>
+            <span class="chip">Risk Mitigation</span>
+          </div>
+        </div>
+
+        <div class="glass-card skill-category reveal">
+          <h3><span class="skill-icon">&#128187;</span> Operating Systems &amp; Virtualization</h3>
+          <div class="chip-cloud">
+            <span class="chip">Kali Linux</span>
+            <span class="chip">Parrot Security OS</span>
+            <span class="chip">Ubuntu Linux</span>
+            <span class="chip">Windows</span>
+            <span class="chip">Oracle VirtualBox</span>
+            <span class="chip">VMware Workstation Pro</span>
+          </div>
+        </div>
+
+        <div class="glass-card skill-category reveal">
+          <h3><span class="skill-icon">&#9729;</span> Cloud &amp; Frameworks</h3>
+          <div class="chip-cloud">
+            <span class="chip">AWS</span>
+            <span class="chip">Docker</span>
+            <span class="chip">Google Cloud</span>
+            <span class="chip">Azure Sentinel</span>
+            <span class="chip">OWASP Top 10</span>
+            <span class="chip">NIST</span>
+            <span class="chip">SOC 2</span>
+            <span class="chip">HIPAA</span>
+            <span class="chip">GDPR</span>
+            <span class="chip">SIEM</span>
+          </div>
+        </div>
+
+        <div class="glass-card skill-category reveal">
+          <h3><span class="skill-icon">&#127919;</span> Training Platforms</h3>
+          <div class="chip-cloud">
+            <span class="chip">TryHackMe</span>
+            <span class="chip">Hack The Box</span>
+            <span class="chip">Metasploitable2</span>
+            <span class="chip">GitHub</span>
+          </div>
+        </div>
+
+        <div class="glass-card skill-category reveal">
+          <h3><span class="skill-icon">&#129504;</span> Soft Skills</h3>
+          <div class="chip-cloud">
+            <span class="chip">Analytical Thinking</span>
+            <span class="chip">Technical Writing</span>
+            <span class="chip">Problem Solving</span>
+            <span class="chip">Collaboration</span>
+            <span class="chip">Teamwork</span>
+            <span class="chip">Ethics &amp; Integrity</span>
+            <span class="chip">Public Speaking</span>
+            <span class="chip">Policy Documentation</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CERTIFICATIONS ============ -->
+  <section id="certifications" class="section section-alt">
+    <div class="section-inner">
+      <p class="section-eyebrow reveal">04 &mdash; Certifications</p>
+      <h2 class="section-title reveal">Credentials</h2>
+
+      <div class="cert-grid">
+        <div class="glass-card cert-card reveal">
+          <div class="cert-top">
+            <span class="cert-badge">ISC2</span>
+          </div>
+          <h3>Certified in Cybersecurity (CC)</h3>
+          <p>Domains covering security principles, incident response, access controls &amp; network security.</p>
+        </div>
+
+        <div class="glass-card cert-card reveal">
+          <div class="cert-top">
+            <span class="cert-badge">Qualys</span>
+          </div>
+          <h3>Vulnerability Management Foundations</h3>
+          <p>Core methodology for identifying, prioritizing and remediating vulnerabilities.</p>
+        </div>
+
+        <div class="glass-card cert-card reveal">
+          <div class="cert-top">
+            <span class="cert-badge">TryHackMe</span>
+          </div>
+          <h3>Pre-Security Path</h3>
+          <p>Foundational networking &amp; security concepts, completed end-to-end.</p>
+        </div>
+
+        <div class="glass-card cert-card reveal">
+          <div class="cert-top">
+            <span class="cert-badge">TryHackMe</span>
+          </div>
+          <h3>Love at First Breach</h3>
+          <p>Introductory offensive-security room completion.</p>
+        </div>
+
+        <div class="glass-card cert-card reveal">
+          <div class="cert-top">
+            <span class="cert-badge">Cisco</span>
+          </div>
+          <h3>Introduction to Cybersecurity</h3>
+          <p>Foundational course on cybersecurity concepts and career paths.</p>
+        </div>
+
+        <div class="glass-card cert-card reveal">
+          <div class="cert-top">
+            <span class="cert-badge">SysCare IT</span>
+          </div>
+          <h3>Ethical Hacking Fundamentals Webinar</h3>
+          <p>SysCare IT Solutions cybersecurity webinar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS / LABS ============ -->
+  <section id="projects" class="section">
+    <div class="section-inner">
+      <p class="section-eyebrow reveal">05 &mdash; Projects &amp; Labs</p>
+      <h2 class="section-title reveal">Hands-on work</h2>
+
+      <div class="project-grid">
+        <div class="glass-card project-card reveal">
+          <div class="project-head">
+            <span class="project-status status-live">Home Lab</span>
+          </div>
+          <h3>Personal Security Research Lab</h3>
+          <p class="project-desc">
+            Designed and configured a dedicated hacking lab using VMware Workstation Pro
+            to host Kali Linux as attacker and Metasploitable2 as target. Performed
+            full-lifecycle penetration tests: reconnaissance with Nmap for port scanning
+            and service identification, followed by exploitation via Metasploit Framework
+            to establish shell sessions and verify compromise.
+          </p>
+          <div class="project-tags">
+            <span class="tag">VMware Workstation Pro</span>
+            <span class="tag">Kali Linux</span>
+            <span class="tag">Metasploitable2</span>
+            <span class="tag">Nmap</span>
+            <span class="tag">Metasploit</span>
+          </div>
+          <div class="project-outcomes">
+            <strong>Outcome:</strong> Verified end-to-end system compromise in a fully
+            controlled, isolated environment.
+          </div>
+        </div>
+
+        <div class="glass-card project-card reveal">
+          <div class="project-head">
+            <span class="project-status status-active">Ongoing</span>
+          </div>
+          <h3>Velvet Shark Studio — Portfolio &amp; Blog</h3>
+          <p class="project-desc">
+            This site. Publishes technical write-ups and step-by-step breakdowns of CTF
+            challenges and lab configurations — translating complex vulnerabilities into
+            actionable documentation.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Technical Writing</span>
+            <span class="tag">Static Site</span>
+            <span class="tag">GitHub Pages</span>
+          </div>
+          <div class="project-outcomes">
+            <strong>Future improvements:</strong> Markdown-driven write-up library and
+            research blog (see <a href="#writeups">Writeups</a> below).
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTF COMPETITIONS ============ -->
+  <section id="ctf" class="section section-alt">
+    <div class="section-inner">
+      <p class="section-eyebrow reveal">06 &mdash; CTF Competitions</p>
+      <h2 class="section-title reveal">Competitive CTF experience</h2>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-marker marker-accent"></div>
+          <div class="glass-card timeline-card">
+            <span class="timeline-date">2026</span>
+            <h3>ICTS CTF</h3>
+            <p class="timeline-org">Result: 25th place of 76 teams &mdash; advanced to Phase 3</p>
+            <div class="project-tags">
+              <span class="tag">OSINT</span>
+              <span class="tag">Web Penetration Testing</span>
+              <span class="tag">Reverse Engineering</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-marker marker-accent"></div>
+          <div class="glass-card timeline-card">
+            <span class="timeline-date">2026</span>
+            <h3>Battle of the Multiverse '26 (International)</h3>
+            <p class="timeline-org">24-hour challenge</p>
+            <div class="project-tags">
+              <span class="tag">Malware Analysis</span>
+              <span class="tag">Digital Forensics</span>
+              <span class="tag">Full-Pwn</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-marker marker-accent"></div>
+          <div class="glass-card timeline-card">
+            <span class="timeline-date">Ongoing</span>
+            <h3>TryHackMe Leagues</h3>
+            <p class="timeline-org">1st Place &mdash; Gold League, following 1st Place in Silver League</p>
+            <p>Persistent, measurable improvement across successive offensive-security leagues.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WRITE-UPS / RESEARCH (teaser + roadmap) ============ -->
+  <section id="writeups" class="section">
+    <div class="section-inner">
+      <p class="section-eyebrow reveal">07 &mdash; CTF Write-ups &amp; Research Blog</p>
+      <h2 class="section-title reveal">Coming online soon</h2>
+      <p class="section-lead reveal">
+        This is where individual CTF write-ups and cybersecurity research posts will live,
+        each with categories, tags, difficulty, reading time and full Markdown/code support.
+        It's being built as a separate Markdown-driven system (see the project README) so
+        new posts can be added by simply dropping in a file &mdash; no fabricated placeholder
+        posts here yet, only real ones once published.
+      </p>
+
+      <div class="writeup-grid">
+        <div class="glass-card writeup-placeholder reveal">
+          <span class="ph-icon">&#128220;</span>
+          <h3>CTF Write-ups</h3>
+          <p>Category, difficulty, platform, tags, screenshots, syntax-highlighted code.</p>
+          <span class="ph-tag">First post coming soon</span>
+        </div>
+        <div class="glass-card writeup-placeholder reveal">
+          <span class="ph-icon">&#128300;</span>
+          <h3>Research &amp; Threat Intel</h3>
+          <p>Vulnerability research, malware analysis notes, and study write-ups.</p>
+          <span class="ph-tag">First post coming soon</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LEADERSHIP / VOLUNTEERING ============ -->
+  <section id="leadership" class="section section-alt">
+    <div class="section-inner">
+      <p class="section-eyebrow reveal">08 &mdash; Leadership &amp; Involvement</p>
+      <h2 class="section-title reveal">Beyond the lab</h2>
+
+      <div class="leader-grid">
+        <div class="glass-card leader-card reveal">
+          <h3>AIESEC — SLIIT Kandy</h3>
+          <p class="timeline-org">Outgoing Global Talent Department, active since March 2026</p>
+          <p>Talent management within a global student organization.</p>
+        </div>
+        <div class="glass-card leader-card reveal">
+          <h3>Senior Prefect</h3>
+          <p class="timeline-org">Madina National School</p>
+          <p>Managed student discipline and large-scale event logistics.</p>
+        </div>
+        <div class="glass-card leader-card reveal">
+          <h3>Head of Script Writing</h3>
+          <p class="timeline-org">Media Unit &amp; Sports Union Co-ordinator</p>
+          <p>Public speaking and technical documentation experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="section">
+    <div class="section-inner">
+      <p class="section-eyebrow reveal">09 &mdash; Contact</p>
+      <h2 class="section-title reveal">Let's connect</h2>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <p class="section-lead">
+            Open to cybersecurity internships and SOC analyst opportunities.
+            Reach out directly or send a message.
+          </p>
+          <ul class="contact-list">
+            <li>
+              <span class="contact-icon">&#9993;</span>
+              <a href="mailto:jegadheesan.shasmitha@gmail.com">jegadheesan.shasmitha@gmail.com</a>
+            </li>
+            <li>
+              <span class="contact-icon">&#128222;</span>
+              <a href="tel:+94767476892">+94 76 7476 892</a>
+            </li>
+            <li>
+              <span class="contact-icon">in</span>
+              <a href="https://www.linkedin.com/in/shasmitha-jegadheesan" target="_blank" rel="noopener">@Shasmitha Jegadheesan</a>
+            </li>
+            <li>
+              <span class="contact-icon">&#128187;</span>
+              <a href="https://tryhackme.com/p/VelvetShark" target="_blank" rel="noopener">TryHackMe — @VelvetShark</a>
+            </li>
+          </ul>
+        </div>
+
+        <form class="glass-card contact-form reveal" action="https://formsubmit.co/jegadheesan.shasmitha@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New message from portfolio site" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+
+          <label>
+            Name
+            <input type="text" name="name" required placeholder="Your name" />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required placeholder="you@example.com" />
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="5" required placeholder="Say hello..."></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+          <p class="form-note">Powered by FormSubmit (free) — no backend required.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <a href="#hero" class="nav-logo">
+      <span class="logo-bracket">&lt;</span>SJ<span class="logo-bracket">/&gt;</span>
+    </a>
+    <p class="footer-tag">Cybersecurity Portfolio &mdash; built &amp; secured by Shasmitha Jegadheesan</p>
+    <div class="footer-socials">
+      <a href="https://www.linkedin.com/in/shasmitha-jegadheesan" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://tryhackme.com/p/VelvetShark" target="_blank" rel="noopener">TryHackMe</a>
+      <a href="mailto:jegadheesan.shasmitha@gmail.com">Email</a>
+    </div>
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">&#8593;</button>
+  </div>
+  <p class="footer-copy">&copy; 2026 Shasmitha Jegadheesan. All rights reserved.</p>
+</footer>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
